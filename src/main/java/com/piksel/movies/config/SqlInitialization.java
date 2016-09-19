@@ -1,8 +1,6 @@
 package com.piksel.movies.config;
 
 
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -18,7 +16,6 @@ import org.springframework.transaction.support.TransactionTemplate;
 import javax.sql.DataSource;
 import java.util.Properties;
 
-
 @Configuration
 @EnableJpaRepositories(basePackages = "com.piksel.movies.persistence")
 public class SqlInitialization {
@@ -29,7 +26,7 @@ public class SqlInitialization {
         dataSource.setDriverClassName("org.postgresql.Driver");
         dataSource.setUrl("jdbc:postgresql://127.0.0.1:5432/movies");
         dataSource.setUsername("genesisuser");
-        dataSource.setPassword("0601dino");
+        dataSource.setPassword("a1111111");
         return dataSource;
     }
 
@@ -59,7 +56,7 @@ public class SqlInitialization {
         return entityManagerFactoryBean;
     }
 
-    protected Properties buildHibernateProperties()    {
+    protected Properties buildHibernateProperties() {
         Properties hibernateProperties = new Properties();
 
         hibernateProperties.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQL9Dialect");
